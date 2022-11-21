@@ -1,8 +1,228 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
+import { ResponsiveAreaBump } from '@nivo/bump'
+import logo from "*.gif";
+
+const data = [
+  {
+    id: "JavaScript",
+    data: [
+      {
+        x: 2000,
+        y: 13
+      },
+      {
+        x: 2001,
+        y: 24
+      },
+      {
+        x: 2002,
+        y: 16
+      },
+      {
+        x: 2003,
+        y: 15
+      },
+      {
+        x: 2004,
+        y: 29
+      },
+      {
+        x: 2005,
+        y: 23
+      }
+    ]
+  },
+  {
+    id: "Typescript" ,
+    icon:"load.gif",
+    data: [
+      {
+        x: 2000,
+        y: 27
+      },
+      {
+        x: 2001,
+        y: 28
+      },
+      {
+        x: 2002,
+        y: 30
+      },
+      {
+        x: 2003,
+        y: 25
+      },
+      {
+        x: 2004,
+        y: 12
+      },
+      {
+        x: 2005,
+        y: 17
+      }
+    ]
+  },
+  {
+    id: "TypeScript",
+    data: [
+      {
+        x: 2000,
+        y: 18
+      },
+      {
+        x: 2001,
+        y: 23
+      },
+      {
+        x: 2002,
+        y: 19
+      },
+      {
+        x: 2003,
+        y: 18
+      },
+      {
+        x: 2004,
+        y: 14
+      },
+      {
+        x: 2005,
+        y: 10
+      }
+    ]
+  },
+  {
+    id: "Elm",
+    data: [
+      {
+        x: 2000,
+        y: 25
+      },
+      {
+        x: 2001,
+        y: 16
+      },
+      {
+        x: 2002,
+        y: 26
+      },
+      {
+        x: 2003,
+        y: 26
+      },
+      {
+        x: 2004,
+        y: 16
+      },
+      {
+        x: 2005,
+        y: 10
+      }
+    ]
+  },
+  {
+    id: "CoffeeScript",
+    data: [
+      {
+        x: 2000,
+        y: 27
+      },
+      {
+        x: 2001,
+        y: 27
+      },
+      {
+        x: 2002,
+        y: 22
+      },
+      {
+        x: 2003,
+        y: 28
+      },
+      {
+        x: 2004,
+        y: 24
+      },
+      {
+        x: 2005,
+        y: 24
+      }
+    ]
+  }
+];
+
+const MyResponsiveAreaBump = () => (
+    <ResponsiveAreaBump
+        data={data}
+        startLabel
+        endLabel
+        margin={{ top: 40, right: 100, bottom: 40, left: 100 }}
+        spacing={8}
+        colors={{ scheme: 'pastel1' }}
+        blendMode="multiply"
+
+        defs={[
+          {
+            id: 'dots',
+            type: 'patternDots',
+            background: 'inherit',
+            color: '#38bcb2',
+            size: 4,
+            padding: 1,
+            stagger: true
+          },
+          {
+            id: 'lines',
+            type: 'patternLines',
+            background: 'inherit',
+            color: '#eed312',
+            rotation: -45,
+            lineWidth: 6,
+            spacing: 10
+          }
+        ]}
+        fill={[
+          {
+            match: {
+              id: 'CoffeeScript'
+            },
+            id: 'dots'
+          },
+          {
+            match: {
+              id: 'TypeScript'
+            },
+            id: 'lines'
+          }
+          ]}
+        axisTop={{
+          tickSize: 5,
+          tickPadding: 5,
+          tickRotation: 0,
+          legend: '',
+          legendPosition: 'middle',
+          legendOffset: -36
+        }}
+        axisBottom={{
+          tickSize: 5,
+          tickPadding: 5,
+          tickRotation: 0,
+          legend: '',
+          legendPosition: 'middle',
+          legendOffset: 32
+        }}
+        onClick={{
+
+        }}
+    />
+)
+
 
 export default function Home() {
+  // @ts-ignore
+  // @ts-ignore
   return (
     <div className={styles.container}>
       <Head>
@@ -13,46 +233,16 @@ export default function Home() {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
+         Carte Boosté <a href="https://nextjs.org"></a>
         </h1>
 
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.tsx</code>
-        </p>
+          <div style={{ height: 300, width: 800 }}>
+            <MyResponsiveAreaBump/>
+          </div>
 
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h2>Documentation &rarr;</h2>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
 
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h2>Learn &rarr;</h2>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/canary/examples"
-            className={styles.card}
-          >
-            <h2>Examples &rarr;</h2>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.card}
-          >
-            <h2>Deploy &rarr;</h2>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
       </main>
+
 
       <footer className={styles.footer}>
         <a
