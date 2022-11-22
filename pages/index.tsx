@@ -2,154 +2,155 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import { ResponsiveAreaBump } from '@nivo/bump'
+import Navbar from "./navbar";
 
 const data = [
-  {
-    id: "JavaScript",
-    data: [
-      {
-        x: 2000,
-        y: 13
-      },
-      {
-        x: 2001,
-        y: 24
-      },
-      {
-        x: 2002,
-        y: 16
-      },
-      {
-        x: 2003,
-        y: 15
-      },
-      {
-        x: 2004,
-        y: 29
-      },
-      {
-        x: 2005,
-        y: 23
-      }
-    ]
-  },
-  {
-    id: "Typescript" ,
-    icon:"load.gif",
-    data: [
-      {
-        x: 2000,
-        y: 27
-      },
-      {
-        x: 2001,
-        y: 28
-      },
-      {
-        x: 2002,
-        y: 30
-      },
-      {
-        x: 2003,
-        y: 25
-      },
-      {
-        x: 2004,
-        y: 12
-      },
-      {
-        x: 2005,
-        y: 17
-      }
-    ]
-  },
-  {
-    id: "TypeScript",
-    data: [
-      {
-        x: 2000,
-        y: 18
-      },
-      {
-        x: 2001,
-        y: 23
-      },
-      {
-        x: 2002,
-        y: 19
-      },
-      {
-        x: 2003,
-        y: 18
-      },
-      {
-        x: 2004,
-        y: 14
-      },
-      {
-        x: 2005,
-        y: 10
-      }
-    ]
-  },
-  {
-    id: "Elm",
-    data: [
-      {
-        x: 2000,
-        y: 25
-      },
-      {
-        x: 2001,
-        y: 16
-      },
-      {
-        x: 2002,
-        y: 26
-      },
-      {
-        x: 2003,
-        y: 26
-      },
-      {
-        x: 2004,
-        y: 16
-      },
-      {
-        x: 2005,
-        y: 10
-      }
-    ]
-  },
-  {
-    id: "CoffeeScript",
-    data: [
-      {
-        x: 2000,
-        y: 27
-      },
-      {
-        x: 2001,
-        y: 27
-      },
-      {
-        x: 2002,
-        y: 22
-      },
-      {
-        x: 2003,
-        y: 28
-      },
-      {
-        x: 2004,
-        y: 24
-      },
-      {
-        x: 2005,
-        y: 24
-      }
-    ]
-  }
+    {
+        id: "JavaScript",
+        data: [
+            {
+                x: 2000,
+                y: 13
+            },
+            {
+                x: 2001,
+                y: 24
+            },
+            {
+                x: 2002,
+                y: 16
+            },
+            {
+                x: 2003,
+                y: 15
+            },
+            {
+                x: 2004,
+                y: 29
+            },
+            {
+                x: 2005,
+                y: 23
+            }
+        ]
+    },
+    {
+        id: "Typescript" ,
+        icon:"load.gif",
+        data: [
+            {
+                x: 2000,
+                y: 27
+            },
+            {
+                x: 2001,
+                y: 28
+            },
+            {
+                x: 2002,
+                y: 30
+            },
+            {
+                x: 2003,
+                y: 25
+            },
+            {
+                x: 2004,
+                y: 12
+            },
+            {
+                x: 2005,
+                y: 17
+            }
+        ]
+    },
+    {
+        id: "TypeScript",
+        data: [
+            {
+                x: 2000,
+                y: 18
+            },
+            {
+                x: 2001,
+                y: 23
+            },
+            {
+                x: 2002,
+                y: 19
+            },
+            {
+                x: 2003,
+                y: 18
+            },
+            {
+                x: 2004,
+                y: 14
+            },
+            {
+                x: 2005,
+                y: 10
+            }
+        ]
+    },
+    {
+        id: "Elm",
+        data: [
+            {
+                x: 2000,
+                y: 25
+            },
+            {
+                x: 2001,
+                y: 16
+            },
+            {
+                x: 2002,
+                y: 26
+            },
+            {
+                x: 2003,
+                y: 26
+            },
+            {
+                x: 2004,
+                y: 16
+            },
+            {
+                x: 2005,
+                y: 10
+            }
+        ]
+    },
+    {
+        id: "CoffeeScript",
+        data: [
+            {
+                x: 2000,
+                y: 27
+            },
+            {
+                x: 2001,
+                y: 27
+            },
+            {
+                x: 2002,
+                y: 22
+            },
+            {
+                x: 2003,
+                y: 28
+            },
+            {
+                x: 2004,
+                y: 24
+            },
+            {
+                x: 2005,
+                y: 24
+            }
+        ]
+    }
 ];
 
 const MyResponsiveAreaBump = () => (
@@ -163,65 +164,62 @@ const MyResponsiveAreaBump = () => (
         blendMode="multiply"
 
         defs={[
-          {
-            id: 'dots',
-            type: 'patternDots',
-            background: 'inherit',
-            color: '#38bcb2',
-            size: 4,
-            padding: 1,
-            stagger: true
-          },
-          {
-            id: 'lines',
-            type: 'patternLines',
-            background: 'inherit',
-            color: '#eed312',
-            rotation: -45,
-            lineWidth: 6,
-            spacing: 10
-          }
+            {
+                id: 'dots',
+                type: 'patternDots',
+                background: 'inherit',
+                color: '#38bcb2',
+                size: 4,
+                padding: 1,
+                stagger: true
+            },
+            {
+                id: 'lines',
+                type: 'patternLines',
+                background: 'inherit',
+                color: '#eed312',
+                rotation: -45,
+                lineWidth: 6,
+                spacing: 10
+            }
         ]}
         fill={[
-          {
-            match: {
-              id: 'CoffeeScript'
+            {
+                match: {
+                    id: 'CoffeeScript',
+
+                },
+                id: 'dots',
             },
-            id: 'dots'
-          },
-          {
-            match: {
-              id: 'TypeScript'
-            },
-            id: 'lines'
-          }
-          ]}
+            {
+                match: {
+                    id: 'TypeScript'
+                },
+                id: 'lines'
+            }
+        ]}
         axisTop={{
-          tickSize: 5,
-          tickPadding: 5,
-          tickRotation: 0,
-          legend: '',
-          legendPosition: 'middle',
-          legendOffset: -36
+            tickSize: 5,
+            tickPadding: 5,
+            tickRotation: 0,
+            legend: '',
+            legendPosition: 'middle',
+            legendOffset: -36
         }}
         axisBottom={{
-          tickSize: 5,
-          tickPadding: 5,
-          tickRotation: 0,
-          legend: '',
-          legendPosition: 'middle',
-          legendOffset: 32
+            tickSize: 5,
+            tickPadding: 5,
+            tickRotation: 0,
+            legend: '',
+            legendPosition: 'middle',
+            legendOffset: 32
         }}
-        onClick={{
 
-        }}
     />
 )
 
 
 export default function Home() {
-  // @ts-ignore
-  // @ts-ignore
   return (
     <div className={styles.container}>
       <Head>
@@ -229,10 +227,9 @@ export default function Home() {
         <meta name="description" content="Generated by create next app" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
-      <main className={styles.main}>
+        <main className={styles.main}>
         <h1 className={styles.title}>
-         Carte Boosté <a href="https://nextjs.org"></a>
+            Carte Boosté
         </h1>
 
           <div style={{ height: 300, width: 800 }}>
