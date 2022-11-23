@@ -32,7 +32,7 @@ const Links = [
     },
     {
         name: "Contact",
-        path: "/with-mongo-db",
+        path: "/contact",
     },
 ];
 
