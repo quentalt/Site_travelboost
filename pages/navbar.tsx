@@ -27,6 +27,7 @@ import Image from "next/image";
 export default function WithSubnavigation() {
     const { isOpen, onToggle } = useDisclosure();
 
+    // @ts-ignore
     return (
         <Box>
             <Flex
@@ -84,11 +85,12 @@ export default function WithSubnavigation() {
                         fontWeight={600}
                         color={'white'}
                         bg={'pink.400'}
-                        href={'#'}
                         _hover={{
                             bg: 'pink.300',
-                        }}>
+                        }}
+                        >
                         Sign Up
+
                     </Button>
                 </Stack>
             </Flex>
