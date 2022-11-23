@@ -2,11 +2,10 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import { ResponsiveAreaBump } from '@nivo/bump'
-import Navbar from "./navbar";
 
 const data = [
     {
-        id: "JavaScript",
+        id: "Avion ✈️",
         data: [
             {
                 x: 2000,
@@ -35,8 +34,7 @@ const data = [
         ]
     },
     {
-        id: "Typescript" ,
-        icon:"load.gif",
+        id: "Metro 🚇" ,
         data: [
             {
                 x: 2000,
@@ -65,7 +63,7 @@ const data = [
         ]
     },
     {
-        id: "TypeScript",
+        id: "Tramways 🚋",
         data: [
             {
                 x: 2000,
@@ -94,7 +92,7 @@ const data = [
         ]
     },
     {
-        id: "Elm",
+        id: "Bus 🚌",
         data: [
             {
                 x: 2000,
@@ -123,7 +121,7 @@ const data = [
         ]
     },
     {
-        id: "CoffeeScript",
+        id: "A pieds 🚶‍♂️",
         data: [
             {
                 x: 2000,
