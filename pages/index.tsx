@@ -230,7 +230,7 @@ export default function Home() {
             Carte Boosté
         </h1>
 
-          <div style={{ height: 300, width: 800 }}>
+          <div style={{ height: 300, width: 570 }}>
             <MyResponsiveAreaBump/>
           </div>
 
@@ -246,7 +246,7 @@ export default function Home() {
         >
           Powered by{' '}
           <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
+            <Image src="/logo.png" alt="Asphere Logo" width={72} height={16} />
           </span>
         </a>
       </footer>
